@@ -14,46 +14,98 @@
       overflow-x: hidden;
     }
 
-    .about-hero {
-      position: relative;
-      background-image: url("static/about/nightcity.png");
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+/* ======= Головний банер сторінки ПРО КОМПАНІЮ ======= */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  background: url("static/about/nightcity_new.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8%;
+  color: #fff;
+  overflow: hidden;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
 
-    .about-hero::after {
+/* затемнення фону для кращого контрасту */
+.about-hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(2, 6, 23, 0.6) 0%, rgba(2, 6, 23, 0.95) 100%);
-  backdrop-filter: blur(2px);
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,20,0.9) 20%, rgba(0,0,50,0.3) 100%);
+  z-index: 0;
+}
+
+/* контент поверх затемнення */
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* стиль заголовка */
+.about-content h1 {
+  font-size: 60px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+/* підсвічена частина */
+.about-content span {
+  color: #3b82f6;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 
+    0 0 4px rgba(59, 130, 246, 0.8),
+    0 0 8px rgba(37, 99, 235, 0.7),
+    0 0 15px rgba(37, 99, 235, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* під час наведення — м’яке підсвічування */
+.about-content span:hover {
+  text-shadow: 
+    0 0 6px rgba(96, 165, 250, 1),
+    0 0 14px rgba(37, 99, 235, 0.9),
+    0 0 22px rgba(37, 99, 235, 0.8);
 }
 
 
+/* опис під заголовком */
+.about-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 550px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+  animation: fadeIn 1.8s ease-out;
+}
 
-    .about-hero-content {
-      position: relative;
-      z-index: 2;
-    }
+/* ефект неонового підсвічування */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 15px #2563eb; }
+  to { text-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6, 0 0 30px #1d4ed8; }
+}
 
-    .about-hero-content h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #f5f5f5;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
+/* плавна анімація появи */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .about-hero-content span {
-      color: #3b82f6;
-      font-weight: 700;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
     /* Section base */
     .about-section {
@@ -193,11 +245,14 @@
 
 
   <!-- HERO -->
-  <section class="about-hero">
-    <div class="about-hero-content">
-      <h1>ВІДКРИЙТЕ НОВІ МОЖЛИВОСТІ <br> РАЗОМ ІЗ <span>ST.AUTO</span></h1>
-    </div>
-  </section>
+<section class="about-hero">
+  <div class="about-overlay"></div>
+  <div class="about-content">
+    <h1>ВІДКРИЙ НОВІ МОЖЛИВОСТІ<br><span>РАЗОМ ІЗ ST.AUTO</span></h1>
+    <p>Ми створюємо шлях до вашого авто мрії — з увагою, стилем і впевненістю в кожній деталі.</p>
+  </div>
+</section>
+
 
   <!-- SECTIONS -->
   <section class="about-section">
