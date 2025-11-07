@@ -3,338 +3,298 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Про Компанію | ST.AUTO</title>
+  <title>Про компанію | ST.AUTO</title>
   <link rel="stylesheet" href="css.css" />
   <style>
-    /* ========== ABOUT PAGE STYLES ========== */
-    body {
-      background-color: #020617;
-      color: #f1f1f1;
-      font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-    }
+/* === BASE === */
+body {
+  background-color: #0a0a12;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
 
-/* ======= Головний банер сторінки ПРО КОМПАНІЮ ======= */
+/* === HERO === */
 .about-hero {
   position: relative;
   height: 100vh;
-  background: url("static/about/nightcity_new.png") no-repeat center center/cover;
+  background: url("static/about/nightcity_new.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 8%;
-  color: #fff;
+  padding-left: 10%;
+  text-shadow: 0 0 20px rgba(0,0,0,0.7);
   overflow: hidden;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
-/* затемнення фону для кращого контрасту */
 .about-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,20,0.9) 20%, rgba(0,0,50,0.3) 100%);
-  z-index: 0;
+  background: linear-gradient(90deg, rgba(5,10,30,0.9) 10%, rgba(5,10,30,0.4) 100%);
+  z-index: 1;
 }
 
-/* контент поверх затемнення */
 .about-content {
   position: relative;
   z-index: 2;
   max-width: 650px;
-  animation: fadeInUp 1.2s ease-out;
+  animation: fadeInUp 1.2s ease;
 }
 
-/* стиль заголовка */
 .about-content h1 {
-  font-size: 60px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  font-size: 3.8rem;
   font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
-/* підсвічена частина */
 .about-content span {
-  color: #3b82f6;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 6px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-shadow: 
-    0 0 4px rgba(59, 130, 246, 0.8),
-    0 0 8px rgba(37, 99, 235, 0.7),
-    0 0 15px rgba(37, 99, 235, 0.5);
+  color: #3f66ff;
+  text-shadow: 0 0 25px rgba(63,102,255,0.9);
+}
+
+.about-content p {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: #cfd4ff;
+}
+
+/* === ABOUT SECTIONS === */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 120px 10%;
+  position: relative;
+  background: linear-gradient(180deg, #05060a 0%, #080b16 100%);
+}
+
+.about-section:nth-child(even) {
+  flex-direction: row-reverse;
+  background: linear-gradient(180deg, #080b16 0%, #05060a 100%);
+}
+
+.about-section img {
+  width: 50%;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(63,102,255,0.25);
+  transition: transform 0.5s ease;
+}
+
+.about-section img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  width: 45%;
+}
+
+.about-text h2 {
+  color: #3f66ff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 18px rgba(63,102,255,0.7);
+}
+
+.about-text p {
+  color: #e1e5ff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* === CONTACT SHORT BLOCK === */
+.about-contact {
+  background: radial-gradient(circle at top, #05060a 0%, #0b0c14 100%);
+  text-align: center;
+  padding: 120px 10%;
+}
+
+.about-contact h2 {
+  color: #3f66ff;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px rgba(63,102,255,0.8);
+}
+
+.about-contact p {
+  color: #aab6ff;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.about-contact form {
+  max-width: 480px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(63,102,255,0.25);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 0 25px rgba(63,102,255,0.25);
+}
+
+.about-contact input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
-/* під час наведення — м’яке підсвічування */
-.about-content span:hover {
-  text-shadow: 
-    0 0 6px rgba(96, 165, 250, 1),
-    0 0 14px rgba(37, 99, 235, 0.9),
-    0 0 22px rgba(37, 99, 235, 0.8);
+.about-contact input:focus {
+  outline: 2px solid #3f66ff;
+  background: rgba(255,255,255,0.15);
 }
 
-
-/* опис під заголовком */
-.about-content p {
-  font-size: 20px;
-  line-height: 1.6;
-  max-width: 550px;
-  color: rgba(255,255,255,0.85);
-  font-weight: 400;
-  animation: fadeIn 1.8s ease-out;
+.about-contact button {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #3f66ff, #1b44ff);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(63,102,255,0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* ефект неонового підсвічування */
-@keyframes glow {
-  from { text-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 15px #2563eb; }
-  to { text-shadow: 0 0 10px #60a5fa, 0 0 20px #3b82f6, 0 0 30px #1d4ed8; }
+.about-contact button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(63,102,255,0.8);
 }
 
-/* плавна анімація появи */
+/* === FOOTER === */
+footer {
+  background: #05060a;
+  text-align: center;
+  padding: 50px 0;
+  color: #aab6ff;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(63,102,255,0.2);
+  box-shadow: 0 -5px 25px rgba(63,102,255,0.1);
+}
+
+/* === ANIMATIONS === */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* === ADAPTIVE === */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text, .about-section img {
+    width: 100%;
+  }
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
 }
-
-
-    /* Section base */
-    .about-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-      padding: 100px 10%;
-    }
-
-    .about-section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .about-section img {
-      width: 50%;
-      border-radius: 15px;
-      box-shadow: 0 0 40px rgba(0, 0, 100, 0.4);
-      transition: transform 0.5s ease;
-    }
-
-    .about-section img:hover {
-      transform: scale(1.05);
-    }
-
-    .about-text {
-      width: 45%;
-    }
-
-    .about-text h2 {
-      color: #3b82f6;
-      font-size: 2rem;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-
-    .about-text p {
-      line-height: 1.7;
-      color: #d1d5db;
-      font-size: 1.1rem;
-    }
-
-    /* Contact section */
-    .about-contact {
-      background: radial-gradient(circle at top, #030712 10%, #000 90%);
-      text-align: center;
-      padding: 100px 10%;
-    }
-
-    .about-contact h2 {
-      color: #3b82f6;
-      text-transform: uppercase;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .about-contact p {
-      color: #d1d5db;
-      margin-bottom: 40px;
-    }
-
-    .contact-form {
-      max-width: 450px;
-      margin: 0 auto;
-      background: #0f172a;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
-    }
-
-    .contact-form input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: none;
-      background: #1e293b;
-      color: #fff;
-      outline: none;
-    }
-
-    .contact-form button {
-      background: #3b82f6;
-      color: white;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 25px;
-      width: 100%;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .contact-form button:hover {
-      background: #2563eb;
-    }
-
-    footer {
-      background: #000;
-      color: #777;
-      text-align: center;
-      padding: 40px 0;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 900px) {
-      .about-section {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-section img,
-      .about-text {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Header -->
-    <header class="main-header">
+
+<!-- HEADER -->
+<header class="main-header">
   <div class="container-header">
     <div class="logo">
       <a href="html.html">
-        <img src="static/logo.png" alt="ST.AUTO" class="logo-img">
+        <img src="static/logo.png" alt="ST.AUTO Logo">
       </a>
     </div>
     <nav class="desktop-nav">
       <a href="html.html">Головна</a>
-      <a href="#">Авто з США</a>
-      <a href="#">Авто в наявності</a>
-      <a href="about.html" class="active">Про компанію</a>
-      <a href="#">Контакти</a>
+      <a href="#" class="active">Про компанію</a>
+      <a href="#contact">Контакти</a>
     </nav>
   </div>
 </header>
 
-
-
-  <!-- HERO -->
+<!-- HERO -->
 <section class="about-hero">
-  <div class="about-overlay"></div>
   <div class="about-content">
     <h1>ВІДКРИЙ НОВІ МОЖЛИВОСТІ<br><span>РАЗОМ ІЗ ST.AUTO</span></h1>
     <p>Ми створюємо шлях до вашого авто мрії — з увагою, стилем і впевненістю в кожній деталі.</p>
   </div>
 </section>
 
+<!-- CONTENT SECTIONS -->
+<section class="about-section">
+  <img src="static/volk.jpg" alt="BMW авто">
+  <div class="about-text">
+    <h2>Інноваційні рішення</h2>
+    <p>ST.AUTO — це сучасна компанія, що поєднує технології, досвід і любов до автомобілів. Ми аналізуємо ринок США, підбираємо лише найкращі авто та забезпечуємо повний цикл імпорту — від аукціону до вашого гаража.</p>
+  </div>
+</section>
 
-  <!-- SECTIONS -->
-  <section class="about-section">
-    <img src="static/about/bmw2.png" alt="BMW авто">
-    <div class="about-text">
-      <h2>Інноваційні рішення</h2>
-      <p>ST.AUTO — це сучасна компанія, що поєднує технології, досвід і любов до автомобілів. Ми аналізуємо ринок США, підбираємо лише найкращі авто та забезпечуємо повний цикл імпорту — від аукціону до вашого гаража.</p>
-    </div>
-  </section>
+<section class="about-section">
+  <img src="static/BMW.jpg" alt="BMW">
+  <div class="about-text">
+    <h2>Сервіс під ключ</h2>
+    <p>Ми беремо на себе всі етапи — від вибору автомобіля до його доставки, розмитнення та сертифікації. Ви отримуєте авто, готове до використання, з офіційними документами та гарантією прозорості на кожному кроці.</p>
+  </div>
+</section>
 
-  <section class="about-section">
-    <img src="static/about/porsche.png" alt="Porsche">
-    <div class="about-text">
-      <h2>Сервіс під ключ</h2>
-      <p>Ми беремо на себе всі етапи — від вибору автомобіля до його доставки, розмитнення та сертифікації. Ви отримуєте авто, готове до використання, з офіційними документами та гарантією прозорості на кожному кроці.</p>
-    </div>
-  </section>
+<section class="about-section">
+  <img src="static/audi.jpg" alt="Audi">
+  <div class="about-text">
+    <h2>Преміум-підхід у деталях</h2>
+    <p>Наші фахівці особисто контролюють кожен етап — від перевірки історії авто до його доставки в Україну. Ми працюємо напряму з американськими аукціонами, без посередників і прихованих платежів.</p>
+  </div>
+</section>
 
-  <section class="about-section">
-    <img src="static/about/bmw3.png" alt="BMW">
-    <div class="about-text">
-      <h2>Преміум-підхід у деталях</h2>
-      <p>Наші фахівці особисто контролюють кожен етап — від перевірки історії авто до його доставки в Україну. Ми працюємо напряму з американськими аукціонами, без посередників і прихованих платежів.</p>
-    </div>
-  </section>
 
-  <section class="about-section">
-    <img src="static/about/odesa.png" alt="Одеса">
-    <div class="about-text">
-      <h2>Офіси в Україні</h2>
-      <p>Ми працюємо по всій Україні — з головним представництвом у Києві та сервісними партнерами в Одесі, Львові та Дніпрі. ST.AUTO — це надійність і турбота, незалежно від вашого міста.</p>
-    </div>
-  </section>
+<!-- CONTACT -->
+<section class="about-contact" id="contact">
+  <h2>Залиште свої контакти</h2>
+  <p>Ми зв’яжемося з вами, щоб допомогти вибрати авто вашої мрії</p>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Ваше ім’я" required>
+    <input type="tel" id="phone" placeholder="+380 ХХ ХХХ ХХ ХХ" required>
+    <button type="submit">Відправити</button>
+  </form>
+</section>
 
-  <section class="about-section">
-    <img src="static/about/kyiv.png" alt="Київ">
-    <div class="about-text">
-      <h2>Наша команда</h2>
-      <p>Ми — команда професіоналів, об’єднана спільною метою: зробити процес купівлі авто з США максимально зручним і вигідним. Ваш комфорт — наша головна цінність.</p>
-    </div>
-  </section>
+<footer>
+  © 2025 ST.AUTO — Усі права захищені.
+</footer>
 
-  <!-- Contact -->
-  <section class="about-contact">
-    <h2>Залиште свої контакти</h2>
-    <p>Ми зв’яжемося з вами, щоб допомогти вибрати авто вашої мрії</p>
-    <form class="contact-form" id="contactForm">
-      <input type="text" id="name" placeholder="Ваше ім’я" required>
-      <input type="tel" id="phone" placeholder="+380 ХХ ХХХ ХХ ХХ" required>
-      <button type="submit">Відправити</button>
-    </form>
-  </section>
+<script>
+  // Відправка даних у Telegram
+  const TOKEN = "YOUR_BOT_TOKEN_HERE";
+  const CHAT_ID = "YOUR_CHAT_ID_HERE";
+  const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-  <footer>
-    © 2025 ST.AUTO — Усі права захищені.
-  </footer>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  <script>
-    // Відправка даних у Telegram
-    const TOKEN = "ТУТ_ТВІЙ_БОТ_ТОКЕН";
-    const CHAT_ID = "ТУТ_ID_ТВОГО_ЧАТУ";
-    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    let message = `<b>Заявка з сайту ST.AUTO</b>\n`;
+    message += `<b>Ім’я:</b> ${document.getElementById("name").value}\n`;
+    message += `<b>Телефон:</b> ${document.getElementById("phone").value}`;
 
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      let message = `<b>Заявка з сайту ST.AUTO</b>\n`;
-      message += `<b>Ім’я:</b> ${document.getElementById("name").value}\n`;
-      message += `<b>Телефон:</b> ${document.getElementById("phone").value}`;
-
-      fetch(URI_API, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message,
-          parse_mode: "html"
-        })
+    fetch(URI_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: "HTML"
       })
-      .then(res => res.ok ? alert("Дані успішно надіслані!") : alert("Помилка при надсиланні."))
-      .catch(err => alert("Помилка з’єднання. Перевірте інтернет або токен."));
-    });
-  </script>
+    })
+    .then(res => res.ok ? alert("✅ Дані успішно відправлені!") : alert("❌ Помилка при відправленні."))
+    .catch(() => alert("⚠️ Помилка мережі. Перевірте інтернет або токен."));
+  });
+</script>
 </body>
 </html>

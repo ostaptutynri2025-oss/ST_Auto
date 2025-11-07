@@ -1,338 +1,400 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ST.AUTO | Автомобілі зі США під ключ</title>
-
-  <meta name="description" content="ST.AUTO — підбір, доставка та продаж авто зі США. Економія до 40%. Якість, надійність і прозорість угод." />
-  <meta property="og:title" content="ST.AUTO — Пригін та продаж автомобілів зі США" />
-  <meta property="og:description" content="Купити авто зі США з ST.AUTO. Професійний підбір, доставка, розмитнення, сервіс." />
-  <meta property="og:image" content="static/logo.png" />
-  <link rel="icon" type="image/png" href="static/logo.png" />
-  <link rel="stylesheet" href="css.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST.AUTO — Авто з США під ключ</title>
+    <link rel="stylesheet" href="css.css">
 </head>
-
 <body>
-  <!-- ===== HEADER ===== -->
-  <header class="main-header">
-    <div class="container-header">
-      <div class="logo">
-        <a href="#"><img src="static/logo.png" alt="ST.AUTO logo" /></a>
-      </div>
+    <header class="main-header">
+        <div class="container-header">
+            <div class="logo">
+                <img src="static/logo.png" alt="ST.AUTO Logo">
+            </div>
+            <nav class="desktop-nav">
+                <a href="#" class="active">Головна</a>
+                <a href="about.html">Про компанію</a>
+                <a href="#contacts.html ">Контакти</a>
+            </nav>
+        </div>
+    </header>
 
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="#" class="active">Головна</a></li>
-          <li><a href="#">Авто з США</a></li>
-          <li><a href="#">Авто в наявності</a></li>
-          <li><a href="about.html">Про Компанію</a></li>
-          <li><a href="#">Контакти</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1><span class="highlight">ВІДКРИЙ</span> НОВІ<br>МОЖЛИВОСТІ<br>РАЗОМ З <span class="brand">ST.AUTO</span></h1>
+            <p>Ми допоможемо знайти авто мрії — без переплат і посередників. Повний супровід від торгів до реєстрації.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Безкоштовний підбір авто</a>
+                <a href="#" class="btn btn-outline">Розрахунок вартості</a>
+            </div>
+        </div>
+        <!-- scroll hint (на hero) -->
+<div class="scroll-hint">
+  <span>Тепер трошки про нас</span>
+  <div class="arrow-down"></div>
+</div>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>АВТОМОБІЛІ ЗІ США ПІД КЛЮЧ</h1>
-      <p>ЕКОНОМІЯ ДО 40%</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn-primary open-modal">Безкоштовний підбір авто</a>
-        <a href="#" class="btn-outline open-modal">Розрахунок вартості</a>
-      </div>
+    </section>
 
-    </div>
-  </section>
+<!-- ===== HOW WE WORK (PREMIUM PANEL STYLE) ===== -->
+<section class="work-panel" id="work">
+  <h2 class="work-title">Як ми працюємо</h2>
+  <p class="work-subtitle">5 кроків до вашого авто мрії</p>
 
-  <!-- ===== POPULAR CARS ===== -->
-  <section class="popular-cars">
-    <h2 class="section-title">НАЙПОПУЛЯРНІШІ <span>АВТОМОБІЛІ</span></h2>
-
-    <div class="cars-grid">
-      <div class="car-card"><img src="static/audi.jpg" alt="Audi" /><div class="car-info"><h3>Audi</h3><p>Ціна від 8,400 $</p></div></div>
-      <div class="car-card"><img src="static/bmw.jpg" alt="BMW" /><div class="car-info"><h3>BMW</h3><p>Ціна від 9,000 $</p></div></div>
-      <div class="car-card"><img src="static/mazda.jpg" alt="Mazda" /><div class="car-info"><h3>Mazda</h3><p>Ціна від 9,400 $</p></div></div>
-      <div class="car-card"><img src="static/mercedes.jpg" alt="Mercedes" /><div class="car-info"><h3>Mercedes-Benz</h3><p>Ціна від 10,000 $</p></div></div>
-      <div class="car-card"><img src="static/mitsubishi.png" alt="Mitsubishi" /><div class="car-info"><h3>Mitsubishi</h3><p>Ціна від 10,500 $</p></div></div>
-      <div class="car-card"><img src="static/volk.jpg" alt="Volkswagen" /><div class="car-info"><h3>Volkswagen</h3><p>Ціна від 8,000 $</p></div></div>
-    </div>
-  </section>
-
- <!-- ===== WHY CHOOSE CARS FROM USA ===== -->
-<section class="why-usa">
-  <div class="why-container">
-    <h2 class="why-title">
-      ЧОМУ ВАРТО <span>КУПЛЯТИ АВТО З США</span>
-    </h2>
-
-    <div class="why-grid">
-      <div class="why-item" data-animate>
-        <div class="why-icon">💰</div>
-        <h3>Економія до 40%</h3>
-        <p>Навіть з урахуванням доставки та розмитнення ви отримуєте авто на 30–40% дешевше, ніж на ринку України.</p>
-      </div>
-
-      <div class="why-item" data-animate>
-        <div class="why-icon">🚗</div>
-        <h3>Великий вибір авто</h3>
-        <p>Щодня на аукціонах США — сотні тисяч машин: від бюджетних седанів до преміальних спорткарів.</p>
-      </div>
-
-      <div class="why-item" data-animate>
-        <div class="why-icon">🔍</div>
-        <h3>Прозора історія</h3>
-        <p>Ми перевіряємо кожен автомобіль за Carfax, AutoCheck та Copart History — жодних “сюрпризів” після покупки.</p>
-      </div>
-
-      <div class="why-item" data-animate>
-        <div class="why-icon">🧰</div>
-        <h3>Відмінний технічний стан</h3>
-        <p>Американські дороги, клімат і сервіс — гарантія того, що ваш автомобіль зберіг ресурс та виглядає як новий.</p>
-      </div>
-
-      <div class="why-item" data-animate>
-        <div class="why-icon">⭐</div>
-        <h3>Ексклюзивні моделі</h3>
-        <p>Отримайте авто, якого немає на нашому ринку — з унікальним дизайном, потужністю та комплектацією.</p>
-      </div>
-
-      <div class="why-item" data-animate>
-        <div class="why-icon">🎯</div>
-        <h3>Під ключ без турбот</h3>
-        <p>Від вибору до отримання ключів — ми беремо всі етапи на себе. Ви лише насолоджуєтесь результатом.</p>
+  <div class="work-gallery">
+    <div class="work-card" style="background-image: url('./static/audi.jpg');">
+      <div class="work-overlay"></div>
+      <div class="work-content">
+        <h3>1. Заявка</h3>
+        <p>Ви залишаєте номер телефону, і наш менеджер одразу зв’язується з вами.</p>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ====== SERVICE SECTION ====== -->
-<section class="service-section">
-  <div class="service-container">
-    <h2 class="service-title">ДОВІРТЕ ПІДБІР АВТО ПРОФЕСІОНАЛАМ</h2>
-    <p class="service-subtitle">
-      Отримайте персональну консультацію щодо ціни, доставки й вартості оформлення.
-    </p>
-
-    <div class="service-grid">
-      <div class="service-card" data-animate>
-        <div class="icon">🚗</div>
-        <h3>Сервіс від вибору до отримання ключів</h3>
-        <p>Ми беремо на себе весь процес — від підбору авто до доставки й оформлення документів. Без зайвих турбот для вас.</p>
-      </div>
-
-      <div class="service-card" data-animate>
-        <div class="icon">🧠</div>
-        <h3>Професійна команда ST.AUTO</h3>
-        <p>Наші спеціалісти контролюють кожен етап — від перевірки історії авто до фінального тесту перед видачею.</p>
-      </div>
-
-      <div class="service-card" data-animate>
-        <div class="icon">💸</div>
-        <h3>Чесна ціна, без посередників</h3>
-        <p>Ми працюємо напряму з американськими аукціонами — без зайвих комісій, прихованих платежів чи переплат.</p>
+    <div class="work-card" style="background-image: url('./static/bmw3.png');">
+      <div class="work-overlay"></div>
+      <div class="work-content">
+        <h3>2. Підбір авто</h3>
+        <p>Ми обираємо найкращі варіанти з аукціонів Copart або IAAI за вашими критеріями.</p>
       </div>
     </div>
 
-    <div class="car-image-container">
-      <img src="static/carup.png" alt="Tesla Car" class="car-image">
+    <div class="work-card" style="background-image: url('static/auction.jpg');">
+      <div class="work-overlay"></div>
+      <div class="work-content">
+        <h3>3. Торги</h3>
+        <p>Беремо участь у торгах, перевіряємо історію, фото та стан авто у реальному часі.</p>
+      </div>
     </div>
 
+    <div class="work-card" style="background-image: url(static/transport.jpg);">
+      <div class="work-overlay"></div>
+      <div class="work-content">
+        <h3>4. Доставка</h3>
+        <p>Організовуємо транспортування та митне оформлення з повною прозорістю.</p>
+      </div>
+    </div>
 
-    <div class="service-btn">
-      <a href="#" class="btn-primary open-modal">Розрахувати вартість авто</a>
-
-    </div>
-  </div>
-</section>
-
-<section class="auction-section">
-  <div class="auction-content">
-    <div class="auction-text">
-      <h2>ПІДБІР НА АУКЦІОНАХ США</h2>
-      <p>
-        Команда ST.AUTO здійснює професійний підбір автомобілів на провідних аукціонах США — Copart, IAAI, Manheim. 
-        Ми ретельно аналізуємо кожен лот, перевіряємо технічний стан, історію та вартість, 
-        щоб запропонувати клієнтам найвигідніші варіанти.
-      </p>
-      <p>
-        Наші фахівці супроводжують клієнта на всіх етапах — від пошуку до доставки. 
-        Ми гарантуємо прозорість угоди, чесну ціну та досконалий сервіс.
-      </p>
-      <a href="about.html" class="btn-detail">Детальніше</a>
-    </div>
-    <div class="auction-image">
-      <img src="static/auction.jpg" alt="Аукціон США">
-    </div>
-  </div>
-</section>
-
-<section class="transport-section">
-  <div class="transport-content">
-    <div class="transport-image">
-      <img src="static/transport.jpg" alt="Транспортування авто">
-    </div>
-    <div class="transport-text">
-      <h2>ДОСТАВКА ТА ЛОГІСТИКА</h2>
-      <p>
-        Ми співпрацюємо лише з перевіреними партнерами, тому ваш автомобіль прибуває вчасно та у бездоганному стані. 
-        Наш відділ логістики контролює кожен етап — від навантаження до розмитнення в Україні.
-      </p>
-      <p>
-        ST.AUTO пропонує зручні маршрути доставки з будь-якої точки США, Кореї чи Європи. 
-        Ми гарантуємо безпеку, оперативність і повну прозорість процесу.
-      </p>
-      <a href="about.html" class="btn-detail">Детальніше</a>
-    </div>
-  </div>
-</section>
-
-<section class="full-service-section">
-  <div class="full-service-content">
-    <div class="full-service-text">
-      <h2>ПОВНИЙ СПЕКТР ПОСЛУГ ПІД КЛЮЧ</h2>
-      <p>
-        ST.AUTO пропонує повний спектр послуг “під ключ”, щоб спростити процес придбання авто. 
-        Ми беремо на себе все — від розмитнення, сертифікації та ремонту до доставки та реєстрації автомобіля.
-      </p>
-      <p>
-        Після завершення всіх етапів ви отримуєте готове авто, яке можна одразу використовувати. 
-        Ми дбаємо про кожну деталь, щоб клієнт отримав максимум зручності, безпеки та впевненості.
-      </p>
-      <a href="about.html" class="btn-detail">Детальніше</a>
-    </div>
-    <div class="full-service-image">
-      <img src="static/service.jpg" alt="ST.AUTO сервіс">
+    <div class="work-card full-width" style="background-image: url('./static/porsche1.png');">
+      <div class="work-overlay"></div>
+      <div class="work-content">
+        <h3>5. Передача авто</h3>
+        <p>Техогляд, сертифікація та вручення ключів. <br> Вітаємо з мрією, що стала реальністю.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
-  <!-- ===== SOCIAL ===== -->
-  <section class="social-section">
-    <h2>Ми в соціальних мережах</h2>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/ostaptut?igsh=ZzRrdWc1dnBiaGI=" target="_blank"><img src="static/instagram.png" alt="Instagram" /></a>
-      <a href="https://t.me/OstapTut" target="_blank"><img src="static/telegram.png" alt="Telegram" /></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="static/facebook.png" alt="Facebook" /></a>
+    <!-- ===== WHY CHOOSE US ===== -->
+<section class="why-choose">
+  <div class="why-bg"></div>
+  
+  <div class="why-content">
+    <div class="why-left">
+      <h2 class="why-title">Чому обирають <span>ST.AUTO</span></h2>
+      <p class="why-subtitle">Ми не просто підбираємо авто — ми створюємо шлях до мрії.</p>
     </div>
-  </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer-container">
-      <img src="static/logo.png" alt="ST.AUTO logo" class="footer-logo" />
-      <p>© 2025 ST.AUTO. Усі права захищено.</p>
-      <p><a href="tel:+380686885303">Телефон: +380 68 688 5303</a></p>
-      <p><a href="mailto:ostap02m@gmail.com">Email: ostap02m@gmail.com</a></p>
+    <div class="why-cards">
+      <div class="why-card">
+        <h3>Прозорість</h3>
+        <p>Повна звітність на кожному етапі — від торгів до доставки. Жодних прихованих комісій чи “сюрпризів”.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Експертність</h3>
+        <p>Ми знаємо ринок США та Європи зсередини. Лише перевірені аукціони, тільки надійні авто.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Підтримка</h3>
+        <p>З вами наш менеджер 24/7 — консультує, радить, супроводжує. Ви ніколи не залишаєтесь самі.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Безпека угод</h3>
+        <p>Усі операції документовані, юридично захищені. Ми працюємо лише офіційно.</p>
+      </div>
     </div>
-  </footer>
 
-  <!-- ===== FIXED SOCIAL BAR ===== -->
-  <div class="fixed-social">
-    <div class="line"></div>
-    <a href="https://www.instagram.com/ostaptut?igsh=ZzRrdWc1dnBiaGI=" target="_blank"><img src="static/instagram.png" alt="Instagram" /></a>
-    <a href="https://t.me/OstapTut" target="_blank"><img src="static/telegram.png" alt="Telegram" /></a>
-    <a href="https://www.facebook.com/" target="_blank"><img src="static/facebook.png" alt="Facebook" /></a>
-    <div class="line"></div>
+    <div class="why-footer">
+      <p>Обирають ті, хто цінує якість.</p>
+      <a href="#contact" class="why-btn">Зв’язатись</a>
+    </div>
   </div>
+</section>
 
-  <script>
-    const elements = document.querySelectorAll("[data-animate]");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      });
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services">
+        <h2>Наші переваги</h2>
+        <div class="service-cards">
+            <div class="card">
+              <img src="static/mercedes.jpg" alt="Авто з США">
+              <h3>Авто з США</h3>
+              <p>Ми допомагаємо підібрати, придбати та доставити авто з США без прихованих комісій.</p>
+        </div>
+
+            <div class="card card-economy">
+              <img src="static/startwithbenefit.png" alt="Авто з США">
+              <h3>Економія до 40%</h3>
+              <p>Наші клієнти отримують автомобілі дешевше ринку, завдяки правильному підбору.</p>
+            </div>
+            <div class="card card-transparency">
+              <img src="static/greyudi.png" alt="Авто з США">
+              <h3>Повна прозорість</h3>
+              <p>Усі авто перевіряються по VIN-коду, історії ремонту та пробігу. Ніяких сюрпризів.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ / ПОШИРЕНІ ЗАПИТАННЯ ===== -->
+<section class="faq">
+  <h2 class="faq-title">Поширені <span>запитання</span></h2>
+  <p class="faq-subtitle">Ми вже відповіли на більшість того, що вас цікавить</p>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">Скільки триває доставка авто з США?</button>
+      <div class="faq-answer">
+        <p>У середньому 6–9 тижнів. Все залежить від аукціону, маршруту судна та розмитнення в Україні.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Які аукціони ви використовуєте?</button>
+      <div class="faq-answer">
+        <p>Ми працюємо лише з офіційними — Copart, IAAI та Manheim. Ви бачите все онлайн, без посередників.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Чи можна замовити авто “під ключ”?</button>
+      <div class="faq-answer">
+        <p>Так. Ми беремо все на себе: від підбору, покупки, доставки, митного оформлення — до сертифікації та реєстрації.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Як відбувається оплата?</button>
+      <div class="faq-answer">
+        <p>Усі платежі проходять офіційно. Ви отримуєте договір, інвойс та підтвердження на кожному етапі.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Чи є гарантії на авто?</button>
+      <div class="faq-answer">
+        <p>Ми гарантуємо прозорість: усі авто перевіряються по VIN, історії та фото до купівлі. Також надаємо звіт Carfax.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // --- FAQ toggle logic ---
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    question.addEventListener("click", () => {
+      item.classList.toggle("active");
+      const answer = item.querySelector(".faq-answer");
+
+      if (item.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = null;
+      }
     });
-    elements.forEach(el => observer.observe(el));
-  </script>
+  });
+</script>
 
-<!-- Модальне вікно -->
-<div id="contactModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <img src="static/logo.png" alt="ST.AUTO Logo" class="modal-logo">
-    <h3>Залиште контактні дані</h3>
-    <p>Ми зв'яжемося з вами у найближчий час</p>
-    <form id="contactForm">
-      <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
-      <input type="tel" id="phone" name="phone" placeholder="+380 (__) ___-__-__" required>
-      <button type="submit" class="modal-btn">ВІДПРАВИТИ</button>
+
+  <!-- ===== CONTACT CTA ===== -->
+<section class="contact-cta" id="contact">
+  <div class="contact-bg"></div>
+
+  <div class="contact-container">
+    <div class="contact-left">
+      <h2>Готові почати?</h2>
+      <p>Залиште свої контакти — і ми підберемо авто вашої мрії.</p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Ваше ім’я" required>
+      <input type="tel" id="phone" name="phone" placeholder="+380..." required>
+      <button type="submit" class="contact-btn">Відправити</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+
+   <script>
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('.main-header');
+    if (window.scrollY > 50) {
+      header.style.background = 'rgba(15, 20, 35, 0.7)';
+    } else {
+      header.style.background = 'rgba(15, 20, 35, 0.45)';
+    }
+  });
+
+  // ---- TRUST MOTION EFFECT ----
+  const trustLayers = document.querySelectorAll('.trust-layer');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const windowH = window.innerHeight;
+
+    trustLayers.forEach((layer, i) => {
+      const rect = layer.getBoundingClientRect();
+      const visible = rect.top < windowH * 0.75 && rect.bottom > windowH * 0.25;
+
+      if (visible) {
+        layer.classList.add('active');
+      } else {
+        layer.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+
+
+<!-- ===== SOCIAL BAR ===== -->
+<div class="social-bar">
+  <a href="https://instagram.com/" target="_blank" class="social-icon">
+    <img src="static/instagram.png" alt="Instagram">
+  </a>
+  <a href="https://t.me/" target="_blank" class="social-icon">
+    <img src="static/telegram.png" alt="Telegram">
+  </a>
+  <a href="https://facebook.com/" target="_blank" class="social-icon">
+    <img src="static/facebook.png" alt="Facebook">
+  </a>
+</div>
+
+<script>
+  const TOKEN = "YOUR_BOT_TOKEN_HERE";  // встав свій токен
+  const CHAT_ID = "YOUR_CHAT_ID_HERE";  // встав свій chat_id
+  const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const formStatus = document.getElementById("formStatus");
+
+    if (name === "" || phone === "") {
+      formStatus.textContent = "Будь ласка, заповніть усі поля.";
+      return;
+    }
+
+    const message = `🚗 <b>Нова заявка ST.AUTO</b>\n👤 Ім’я: ${name}\n📞 Телефон: ${phone}`;
+
+    fetch(URL_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: "HTML"
+      })
+    })
+    .then(res => {
+      if (res.ok) {
+        formStatus.textContent = "✅ Дані успішно відправлені!";
+        document.getElementById("contactForm").reset();
+      } else {
+        formStatus.textContent = "❌ Помилка при відправленні. Спробуйте пізніше.";
+      }
+    })
+    .catch(() => {
+      formStatus.textContent = "⚠️ Помилка мережі. Перевірте інтернет.";
+    });
+  });
+</script>
+
+
+<!-- ===== MODAL FORM ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <h2>Залиште заявку</h2>
+    <p>Наш менеджер зв’яжеться з вами найближчим часом</p>
+
+    <form id="modalForm" class="modal-form">
+      <input type="text" id="modalName" name="name" placeholder="Ваше ім’я" required>
+      <input type="tel" id="modalPhone" name="phone" placeholder="+380..." required>
+      <button type="submit" class="modal-btn">Відправити</button>
+      <p id="modalStatus" class="modal-status"></p>
     </form>
   </div>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('contactModal');
-  const openButtons = document.querySelectorAll('.open-modal');
-  const closeBtn = document.querySelector('.close-btn');
-  const form = document.getElementById('contactForm');
+  // ===== MODAL LOGIC =====
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalClose = document.getElementById("modalClose");
+  const modalForm = document.getElementById("modalForm");
+  const modalStatus = document.getElementById("modalStatus");
 
-  // ===== Відкрити модальне вікно =====
-  openButtons.forEach(btn => {
-    btn.addEventListener('click', e => {
+  // Відкриття при натисканні на будь-яку кнопку (з класами .btn-primary або .btn-outline)
+  document.querySelectorAll(".btn-primary, .btn-outline").forEach(btn => {
+    btn.addEventListener("click", e => {
       e.preventDefault();
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      modalOverlay.style.display = "flex";
     });
   });
 
-  // ===== Закрити =====
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+  // Закриття по X або кліку поза модальним вікном
+  modalClose.addEventListener("click", () => modalOverlay.style.display = "none");
+  modalOverlay.addEventListener("click", e => {
+    if (e.target === modalOverlay) modalOverlay.style.display = "none";
   });
 
-  window.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  });
-
-  // ===== Відправлення на Telegram =====
-  form.addEventListener('submit', async function(e) {
+  // Відправка у Telegram (використовує твій той самий токен і chat_id)
+  modalForm.addEventListener("submit", function(e) {
     e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
 
-    if (!name || !phone) {
-      alert("Будь ласка, заповніть усі поля.");
+    const name = document.getElementById("modalName").value.trim();
+    const phone = document.getElementById("modalPhone").value.trim();
+
+    if (name === "" || phone === "") {
+      modalStatus.textContent = "Будь ласка, заповніть усі поля.";
       return;
     }
 
-    // --- Твої Telegram-дані ---
-    const BOT_TOKEN = "тут_твій_бот_токен";
-    const CHAT_ID = "тут_твій_chat_id";
+    const message = `🚗 <b>Нова заявка (модальне вікно)</b>\n👤 Ім’я: ${name}\n📞 Телефон: ${phone}`;
 
-    const text = `🚗 *Нове звернення з сайту ST.AUTO*\n\n👤 Ім'я: ${name}\n📞 Телефон: ${phone}`;
-
-    try {
-      await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: text,
-          parse_mode: "Markdown"
-        }),
-      });
-
-      alert("Дякуємо! Ми зв'яжемося з вами найближчим часом.");
-      form.reset();
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    } catch (error) {
-      alert("Помилка при відправленні. Спробуйте пізніше.");
-      console.error(error);
-    }
+    fetch(URL_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: "HTML"
+      })
+    })
+    .then(res => {
+      if (res.ok) {
+        modalStatus.textContent = "✅ Заявку відправлено!";
+        modalForm.reset();
+        setTimeout(() => modalOverlay.style.display = "none", 1000);
+      } else {
+        modalStatus.textContent = "❌ Помилка при відправленні.";
+      }
+    })
+    .catch(() => {
+      modalStatus.textContent = "⚠️ Помилка мережі. Спробуйте пізніше.";
+    });
   });
-});
 </script>
-
 
 </body>
 </html>

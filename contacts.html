@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти | ST.AUTO</title>
+  <link rel="stylesheet" href="css.css">
+  <style>
+body {
+  background: radial-gradient(circle at center, #05060a 0%, #0a0a12 100%);
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+.contact-hero {
+  position: relative;
+  height: 80vh;
+  background: url("static/contact-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5,10,30,0.85) 0%, rgba(5,10,30,0.6) 100%);
+  z-index: 1;
+}
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+.contact-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #3f66ff;
+  text-shadow: 0 0 30px rgba(63,102,255,0.8);
+  margin-bottom: 20px;
+}
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 100px 10%;
+  flex-wrap: wrap;
+}
+.contact-info, .contact-form-box {
+  flex: 1;
+  min-width: 320px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(63,102,255,0.25);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(63,102,255,0.15);
+  backdrop-filter: blur(8px);
+}
+.contact-info h2, .contact-form-box h2 {
+  color: #3f66ff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 20px rgba(63,102,255,0.7);
+}
+.contact-info .info-item { margin-bottom: 20px; }
+.contact-info .info-item span {
+  display: block;
+  font-weight: 700;
+  color: #3f66ff;
+  margin-bottom: 5px;
+}
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-info a:hover {
+  color: #7aa0ff;
+  text-shadow: 0 0 10px rgba(63,102,255,0.8);
+}
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+.contact-form-box button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(90deg, #3f66ff, #1b44ff);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 0 25px rgba(63,102,255,0.5);
+  cursor: pointer;
+}
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(63,102,255,0.2);
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+footer {
+  background: #05060a;
+  text-align: center;
+  padding: 50px 0;
+  color: #aab6ff;
+  border-top: 1px solid rgba(63,102,255,0.2);
+}
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container-header">
+    <div class="logo">
+      <a href="html.html"><img src="static/logo.png" alt="ST.AUTO Logo"></a>
+    </div>
+    <nav class="desktop-nav">
+      <a href="html.html">Головна</a>
+      <a href="about.html">Про компанію</a>
+      <a href="contacts.html" class="active">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<section class="contact-hero">
+  <div class="contact-hero-content">
+    <h1>Зв’яжіться з нами</h1>
+    <p>Ми завжди відкриті до співпраці, консультацій і допомоги у виборі авто вашої мрії.</p>
+  </div>
+</section>
+
+<section class="contact-main">
+  <div class="contact-info">
+    <h2>Контактна інформація</h2>
+    <div class="info-item">
+      <span>Телефон:</span>
+      <a href="tel:+380971234567">+38 (097) 123-45-67</a>
+    </div>
+    <div class="info-item">
+      <span>Email:</span>
+      <a href="mailto:info@stauto.com">info@stauto.com</a>
+    </div>
+    <div class="info-item">
+      <span>Адреса офісу:</span>
+      <p>м. Київ, вул. Городецького, 12</p>
+    </div>
+    <div class="info-item">
+      <span>Соціальні мережі:</span>
+      <a href="https://t.me/" target="_blank">Telegram</a> |
+      <a href="https://instagram.com/" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+    </div>
+  </div>
+
+  <div class="contact-form-box">
+    <h2>Напишіть нам</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Ваше ім’я" required>
+      <input type="tel" id="phone" placeholder="+380 ХХ ХХХ ХХ ХХ" required>
+      <textarea id="message" placeholder="Ваше повідомлення..." rows="4" required></textarea>
+      <button type="submit">Відправити</button>
+    </form>
+  </div>
+</section>
+
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.796891516349!2d30.52511527688054!3d50.45009397159826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5e9acdd9af%3A0x9cb4029d054b0e1!2z0JrQvtC80LXRgNGB0LrQsNGPINCe0LrQsNGA0YzRgdC60LjQuSDQv9Cw0YDQsNC00YDQtdC90YvQuSDRgdC10LzQtdC90L3QvtCz0L4!5e0!3m2!1suk!2sua!4v1704048237894!5m2!1suk!2sua"
+    allowfullscreen=""
+    loading="lazy"></iframe>
+</div>
+
+<footer>
+  © 2025 ST.AUTO — Усі права захищені.
+</footer>
+
+<script>
+  const TOKEN = "YOUR_BOT_TOKEN_HERE";
+  const CHAT_ID = "YOUR_CHAT_ID_HERE";
+  const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const text = `📩 <b>Нове повідомлення з сайту ST.AUTO</b>\n👤 Ім’я: ${name}\n📞 Телефон: ${phone}\n💬 Повідомлення: ${message}`;
+
+    fetch(URL_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: "HTML" })
+    })
+    .then(res => res.ok ? alert("✅ Повідомлення відправлено!") : alert("❌ Помилка при відправленні."))
+    .catch(() => alert("⚠️ Помилка мережі."));
+  });
+</script>
+
+</body>
+</html>
